@@ -1,0 +1,111 @@
+.header {
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
+  .section-container {
+    @include flex;
+    margin: 5px auto;
+    padding: 5px 15px;
+
+    @include responsive-large {
+      justify-content: center;
+      gap: 20px;
+    }
+
+    @include responsive-small {
+      padding: 5px 20px;
+    }
+
+    @include responsive(0px, 515px) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.logo {
+  user-select: none;
+  width: 65px;
+  cursor: pointer;
+
+  @include responsive-medium {
+    width: 55px;
+  }
+}
+
+.nav {
+  @include responsive(0px, 515px) {
+    .nav-list {
+      display: none;
+    }
+    .nav-toggle {
+      display: flex;
+    }
+  }
+
+  &-toggle {
+    @include flex;
+    width: 23px;
+    height: 20px;
+    display: none;
+    cursor: pointer;
+
+    .bar {
+      width: 100%;
+      height: 2.4px;
+      border-radius: 40px;
+      background-color: $light;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: '';
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        border-radius: inherit;
+        position: absolute;
+      }
+
+      &::before {
+        bottom: 8.4px;
+      }
+
+      &::after {
+        top: 8.4px;
+      }
+    }
+  }
+
+  &-list {
+    @include flex();
+  }
+
+  &-item {
+    list-style: none;
+    margin: 0 13px;
+    position: relative;
+
+    &:hover &__link {
+      color: $primary-color;
+    }
+
+    @include responsive-medium {
+      margin: 0 8px;
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      text-decoration: none;
+      color: $light;
+      text-transform: capitalize;
+
+      @include responsive-medium {
+        font-size: 14px;
+      }
+    }
+  }
+}

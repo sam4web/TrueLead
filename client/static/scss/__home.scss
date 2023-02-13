@@ -1,1 +1,17 @@
 // styles for home page
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  background-color: $dark;
+  position: relative;
+
+  @include parallex-bg('../img/hero-bg.jpg');
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.75);
+  }
+}
