@@ -8,30 +8,26 @@ $('.back-to-top').click(() => {
   window.scrollTo(0, 0);
 });
 
-// set theme in localStorage and in document className
-const setTheme = (themeName) => {
-  localStorage.setItem('theme', themeName);
-  document.documentElement.className = themeName;
-};
+// toggle navbar
+$('.nav-toggle').click(() => {
+  $('header').toggleClass('header-toggle-active');
+});
 
-// function to toggle between light and dark theme
-const toggleTheme = () => {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-light');
-  } else {
-    setTheme('theme-dark');
+// hide navbar on large screen
+$(window).on('resize', function () {
+  let win = $(this);
+  if (win.width() >= 515) {
+    $('header').removeClass('header-toggle-active');
   }
-};
+});
 
-// Immediately invoked function to set the theme on initial load
-(() => {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-dark');
+// hides navbar on scroll event
+// changes styles of header on scroll event
+$(window).scroll(function () {
+  $('header').removeClass('header-toggle-active');
+  if ($(this).scrollTop() > 80) {
+    $('header').addClass('header-scroll-active');
   } else {
-    setTheme('theme-light');
+    $('header').removeClass('header-scroll-active');
   }
-})();
-
-$('.toggle-btn').click(() => {
-  toggleTheme();
 });

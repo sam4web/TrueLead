@@ -3,11 +3,24 @@
   width: 100%;
   position: fixed;
   z-index: 100;
+  padding-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 1.5px;
+    background-color: $primary-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: inherit;
+  }
 
   .section-container {
     @include flex;
-    margin: 5px auto;
-    padding: 5px 15px;
+    margin: 0 auto;
+    padding: 3px 15px;
 
     @include responsive-large {
       justify-content: center;
@@ -15,7 +28,7 @@
     }
 
     @include responsive-small {
-      padding: 5px 20px;
+      padding: 0px 20px;
     }
 
     @include responsive(0px, 515px) {
@@ -26,7 +39,7 @@
 
 .logo {
   user-select: none;
-  width: 65px;
+  width: 60px;
   cursor: pointer;
 
   @include responsive-medium {
@@ -50,6 +63,9 @@
     height: 20px;
     display: none;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 15px;
 
     .bar {
       width: 100%;
@@ -107,5 +123,62 @@
         font-size: 14px;
       }
     }
+  }
+}
+
+.header-toggle-active,
+.header-scroll-active {
+  background-color: rgba($light, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+
+  .nav-toggle .bar {
+    background-color: $dark;
+  }
+
+  .nav-item__link {
+    color: $dark;
+    font-weight: 500;
+  }
+}
+
+.header-toggle-active {
+  &::after {
+    width: 100%;
+  }
+
+  .nav-toggle .bar {
+    transform: rotate(135deg);
+
+    &::before {
+      transform: rotate(90deg);
+      bottom: 0;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .section-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+  }
+
+  .nav {
+    width: 100%;
+
+    &-list {
+      display: block;
+      padding-bottom: 7px;
+    }
+  }
+}
+
+.header-scroll-active {
+  padding: 0px;
+
+  .nav-toggle .bar {
+    height: 2.9px;
   }
 }

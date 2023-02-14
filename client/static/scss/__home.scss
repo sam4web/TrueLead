@@ -1,17 +1,113 @@
 // styles for home page
 .hero-section {
+  @include parallex-bg('../img/hero-bg.jpg');
+  @include flex(center, center);
   height: 100vh;
   width: 100%;
-  background-color: $dark;
   position: relative;
-
-  @include parallex-bg('../img/hero-bg.jpg');
+  text-align: center;
 
   &::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba($black, 0.75);
+    background-color: rgba($black, 0.8);
+  }
+
+  .shape {
+    width: 100%;
+    position: absolute;
+    color: $white;
+    bottom: -20px;
+
+    @include responsive-small {
+      bottom: -7px;
+    }
+
+    & svg path {
+      fill: $white;
+    }
+  }
+
+  .mouse-icon {
+    position: absolute;
+    bottom: 120px;
+    width: 28.5px;
+    height: 45px;
+    border-radius: 40px;
+    border: 2px solid $white;
+    @include flex(center, flex-start);
+    padding: 8px;
+
+    @media only screen and (max-height: 565px) {
+      bottom: 90px;
+    }
+
+    @media only screen and (max-height: 415px) {
+      display: none;
+    }
+
+    @include responsive-medium {
+      bottom: 70px;
+    }
+
+    @include responsive-small {
+      bottom: 60px;
+      width: 25px;
+      height: 40px;
+      padding: 6px;
+    }
+
+    .wheel {
+      border-radius: 40px;
+      width: 3px;
+      height: 8px;
+      background-color: $white;
+      animation: scroll-wheel 1.2s forwards infinite;
+    }
+  }
+
+  .section-container {
+    max-width: 500px;
+    z-index: 50;
+
+    .section-subtitle {
+      color: $white;
+      font-weight: 400;
+      letter-spacing: 7px;
+      font-size: 16px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .section-title {
+      margin-top: 18px;
+      color: $light;
+      text-transform: uppercase;
+      font-size: 38px;
+      line-height: 46px;
+
+      @include responsive-medium {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      @include responsive-small {
+        margin-top: 10px;
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+@keyframes scroll-wheel {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(10px);
+    opacity: 0;
   }
 }
