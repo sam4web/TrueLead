@@ -4,12 +4,12 @@
   position: fixed;
   z-index: 100;
   padding-top: 10px;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
   &::after {
     content: '';
     width: 0;
-    height: 1.5px;
+    height: 3.5px;
     background-color: $primary-color;
     position: absolute;
     bottom: 0;
@@ -112,23 +112,19 @@
     }
 
     &__link {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 24px;
       font-weight: 400;
       text-decoration: none;
       color: $light;
       text-transform: capitalize;
-
-      @include responsive-medium {
-        font-size: 14px;
-      }
     }
   }
 }
 
 .header-toggle-active,
 .header-scroll-active {
-  background-color: rgba($light, 0.8);
+  background-color: rgba($white, 0.9);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
 
   .nav-toggle .bar {
