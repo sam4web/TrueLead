@@ -72,5 +72,46 @@ ul {
 .section-container {
   max-width: 1150px;
   margin: 10px auto;
-  padding: 15px 10px;
+  padding: 30px 25px;
+
+  &.section-bg {
+    background-color: #f5f8fc;
+  }
+
+  @include responsive-medium {
+    padding: 20px;
+  }
+
+  @include responsive-small {
+    padding: 15px 10px;
+  }
+
+  .section-title,
+  .section-subtitle {
+    color: $grey;
+  }
+
+  .section-title {
+    font-size: 28.5px;
+    line-height: 38px;
+    font-weight: 600;
+
+    @include responsive-medium {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @include responsive-medium {
+      margin-bottom: 10px;
+      font-size: 12.5px;
+      line-height: 24px;
+    }
+  }
 }

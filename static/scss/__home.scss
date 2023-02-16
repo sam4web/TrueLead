@@ -1,4 +1,5 @@
-// styles for home page
+// styles for hero section
+// START
 .hero-section {
   @include parallex-bg('../img/hero-bg.jpg');
   @include flex(center, center);
@@ -111,3 +112,76 @@
     opacity: 0;
   }
 }
+// END
+
+// styles for hero section
+// START
+.about-section {
+  .section-row {
+    width: 100%;
+    @include grid();
+    grid-template-columns: 0.8fr 1fr;
+    gap: 50px;
+
+    &:nth-child(1) {
+      margin-bottom: 45px;
+    }
+
+    @include responsive-large {
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include responsive-medium {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include responsive-small {
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .about-content {
+    font-size: 15px;
+    line-height: 21px;
+    color: $grey;
+    margin: 15px 0;
+
+    &:nth-child(even) {
+      font-weight: 600;
+    }
+
+    @include responsive-medium {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .image-container {
+    @include grid();
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+
+    @include responsive-large {
+      gap: 20px;
+    }
+
+    @include responsive-medium {
+      gap: 15px;
+    }
+
+    img {
+      border-radius: 5px;
+
+      @include responsive-small {
+        &:nth-child(odd) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+// END
