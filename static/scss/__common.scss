@@ -69,14 +69,14 @@ ul {
   z-index: 1000;
 }
 
+.section-bg {
+  background-color: #f5f8fc;
+}
+
 .section-container {
   max-width: 1150px;
   margin: 10px auto;
   padding: 30px 25px;
-
-  &.section-bg {
-    background-color: #f5f8fc;
-  }
 
   @include responsive-medium {
     padding: 20px;
@@ -89,12 +89,14 @@ ul {
   .section-title,
   .section-subtitle {
     color: $grey;
+    text-align: center;
   }
 
   .section-title {
-    font-size: 28.5px;
+    font-size: 30px;
     line-height: 38px;
     font-weight: 600;
+    margin-bottom: 5px;
 
     @include responsive-medium {
       font-size: 24px;

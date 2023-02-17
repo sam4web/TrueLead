@@ -114,33 +114,36 @@
 }
 // END
 
-// styles for hero section
+// styles for about section
 // START
 .about-section {
+  .section-title,
+  .section-subtitle {
+    text-align: left;
+  }
+
   .section-row {
     width: 100%;
     @include grid();
     grid-template-columns: 0.8fr 1fr;
     gap: 50px;
 
-    &:nth-child(1) {
-      margin-bottom: 45px;
-    }
+    padding: 20px 0;
 
     @include responsive-large {
       gap: 30px;
-      margin-bottom: 30px;
+      padding: 15px 0;
     }
 
     @include responsive-medium {
       grid-template-columns: 1fr;
       gap: 20px;
-      margin-bottom: 20px;
+      padding: 10px 0;
     }
 
     @include responsive-small {
       gap: 10px;
-      margin-bottom: 10px;
+      padding: 5px 0;
     }
   }
 
@@ -181,6 +184,65 @@
           display: none;
         }
       }
+    }
+  }
+}
+// END
+
+// styles for service section
+// START
+.service-section {
+  .section-row {
+    @include flex;
+    gap: 25px;
+    margin-top: 37px;
+
+    @include responsive-large {
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    @include responsive-medium {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  }
+
+  .service-item {
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 5px;
+    padding: 20px 15px;
+    width: 100%;
+    max-width: 380px;
+
+    @include flex(center, flex-start);
+    gap: 13px;
+    flex-direction: column;
+
+    @include responsive-medium {
+      gap: 10px;
+    }
+
+    &__index {
+      color: $primary-color;
+      font-size: 12.8px;
+      line-height: 19.2px;
+      font-weight: 700;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $grey;
+    }
+
+    &__description {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $grey;
     }
   }
 }
