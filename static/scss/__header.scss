@@ -28,11 +28,8 @@
     }
 
     @include responsive-small {
-      padding: 0px 20px;
-    }
-
-    @include responsive(0px, 515px) {
       justify-content: space-between;
+      padding: 0px 20px;
     }
   }
 }
@@ -48,7 +45,7 @@
 }
 
 .nav {
-  @include responsive(0px, 515px) {
+  @include responsive-small {
     .nav-list {
       display: none;
     }
@@ -103,6 +100,7 @@
     margin: 0 13px;
     position: relative;
 
+    &.active &__link,
     &:hover &__link {
       color: $primary-color;
     }
@@ -166,7 +164,11 @@
 
     &-list {
       display: block;
-      padding-bottom: 7px;
+      padding-bottom: 10px;
+    }
+
+    &-item {
+      margin-bottom: 3px;
     }
   }
 }

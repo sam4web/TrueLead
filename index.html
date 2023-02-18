@@ -23,20 +23,29 @@
 
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#" class="nav-item__link">home</a>
+            <li class="nav-item home active">
+              <a href="#" onClick="return false;" class="nav-item__link">
+                home
+              </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-item__link">about us</a>
+            <li class="nav-item about">
+              <a href="#" onClick="return false;" class="nav-item__link">
+                about us
+              </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-item__link">our services</a>
+            <li class="nav-item service">
+              <a href="#" onClick="return false;" class="nav-item__link">
+                our services
+              </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-item__link">blog</a>
+            <li class="nav-item portfolio">
+              <a href="#portfolio" class="nav-item__link">portfolio</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-item__link">contact</a>
+            <li class="nav-item blog">
+              <a href="#blog" class="nav-item__link">blog</a>
+            </li>
+            <li class="nav-item contact">
+              <a href="#contact" class="nav-item__link">contact</a>
             </li>
           </ul>
           <!-- /nav-list -->
@@ -52,7 +61,7 @@
     <!-- Header section end -->
 
     <!-- Hero section start -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
       <div class="section-container">
         <h2 class="section-subtitle">TrueLead</h2>
         <h1 class="section-title">A Creative Web Development Agency</h1>
@@ -75,7 +84,7 @@
     <!-- Hero section end -->
 
     <!-- About section start -->
-    <section class="about-section">
+    <section class="about-section" id="about">
       <div class="section-container">
         <div class="section-row">
           <div class="content-container">
@@ -138,7 +147,7 @@
     <!-- About section end -->
 
     <!-- Services section start -->
-    <section class="service-section section-bg">
+    <section class="service-section section-bg" id="service">
       <div class="section-container">
         <h3 class="section-title">Our Service</h3>
         <h5 class="section-subtitle">

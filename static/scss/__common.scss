@@ -97,6 +97,7 @@ ul {
     line-height: 38px;
     font-weight: 600;
     margin-bottom: 5px;
+    text-transform: capitalize;
 
     @include responsive-medium {
       font-size: 24px;
