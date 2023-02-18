@@ -24,7 +24,7 @@
 
     @include responsive-large {
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
     }
 
     @include responsive-small {
@@ -120,6 +120,12 @@
   }
 }
 
+.contact {
+  @include responsive-small {
+    display: none;
+  }
+}
+
 .header-toggle-active,
 .header-scroll-active {
   background-color: rgba($white, 0.9);
@@ -136,8 +142,16 @@
 }
 
 .header-toggle-active {
+  .section-container {
+    padding-bottom: 13px;
+  }
+
   &::after {
     width: 100%;
+  }
+
+  .contact {
+    display: inline-block;
   }
 
   .nav-toggle .bar {
@@ -164,7 +178,6 @@
 
     &-list {
       display: block;
-      padding-bottom: 10px;
     }
 
     &-item {
