@@ -200,16 +200,69 @@
           New stunning projects for our amazing clients
         </h5>
 
-        <div class="filters">
-          <a href="javascript:void(0)" class="active" data-filter="all">All</a>
-          <a href="javascript:void(0)" data-filter="web">Web</a>
-          <a href="javascript:void(0)" data-filter="android">Android</a>
-          <a href="javascript:void(0)" data-filter="ios">IOS</a>
-          <a href="javascript:void(0)" data-filter="design">Design</a>
+        <div class="filter-container">
+          <a href="javascript:void(0)" class="active filter" data-filter="all">
+            All
+          </a>
+          <a href="javascript:void(0)" class="filter" data-filter="web">Web</a>
+          <a href="javascript:void(0)" class="filter" data-filter="android">
+            Android
+          </a>
+          <a href="javascript:void(0)" class="filter" data-filter="ios">IOS</a>
+          <a href="javascript:void(0)" class="filter" data-filter="design">
+            Design
+          </a>
+        </div>
+        <!-- /filter-container -->
+
+        <div class="project-container">
+          <script>
+            for (let i = 1; i < 6; i++) {
+              document.write(
+                `<div 
+                  class='project-item' 
+                  style='background-image: url("./static/img/project-0${i}.jpg")' 
+                 >
+                    <div class='project-content'>
+                        <h4 class='project-item__title'>WEB</h4>
+                        <p class='project-item__description'>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing.
+                        </p>
+                    </div>
+                  </div>`
+              );
+            }
+          </script>
+          <!-- /project-item loop -->
+        </div>
+        <!-- /project-container -->
+      </div>
+      <!-- /section-container -->
+    </section>
+    <!-- Portfolio section end -->
+
+    <section class="blog-section" id="blog">
+      <div class="section-container">
+        <h3 class="section-title">latest articles</h3>
+        <h5 class="section-subtitle">
+          Architecto provident deserunt eveniet libero
+        </h5>
+
+        <div class="section-row">
+          <div class="blog-item">
+            <img src="./static/img/blog-01" alt="article-img" />
+            <div class="blog-item__content">
+              <h4 class="blog-item__title">Efficiently engineer</h4>
+              <p class="blog-item__description">
+                Competently envisioneer client-centric channels via
+                functionalized "outside the box"...
+              </p>
+              <a href="#">Read article</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Portfolio section end -->
 
     <!-- JS -->
     <script src="./static/js/jquery.min.js"></script>
