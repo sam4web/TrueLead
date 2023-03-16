@@ -120,7 +120,13 @@
   }
 }
 
-.contact {
+.contact-btn {
+  color: $white;
+
+  &:hover {
+    color: $white !important;
+  }
+
   @include responsive-small {
     display: none;
   }
@@ -139,6 +145,10 @@
     color: $dark;
     font-weight: 500;
   }
+
+  .contact-btn:hover {
+    color: $dark !important;
+  }
 }
 
 .header-toggle-active {
@@ -150,7 +160,7 @@
     width: 100%;
   }
 
-  .contact {
+  .contact-btn {
     display: inline-block;
   }
 

@@ -10,14 +10,14 @@ $('.back-to-top').click(() => {
 
 // toggle navbar
 $('.nav-toggle').click(() => {
-  $('header').toggleClass('header-toggle-active');
+  $('.header').toggleClass('header-toggle-active');
 });
 
 // hide navbar on large screen
 $(window).on('resize', function () {
   let win = $(this);
   if (win.width() >= 515) {
-    $('header').removeClass('header-toggle-active');
+    $('.header').removeClass('header-toggle-active');
   }
 });
 
@@ -26,11 +26,13 @@ $(window).on('resize', function () {
 // > changes styles of header
 // > runs scrollSpy function
 $(window).scroll(function () {
-  $('header').removeClass('header-toggle-active');
+  $('.header').removeClass('header-toggle-active');
   if ($(this).scrollTop() > 80) {
-    $('header').addClass('header-scroll-active');
+    $('.header').addClass('header-scroll-active');
+    $('.mouse-scroll').fadeOut();
   } else {
-    $('header').removeClass('header-scroll-active');
+    $('.header').removeClass('header-scroll-active');
+    $('.mouse-scroll').fadeIn();
   }
 
   scrollSpy();
@@ -42,8 +44,8 @@ $(window).scroll(function () {
 function scrollSpy() {
   let current = '';
 
-  $('section').each((i) => {
-    let section = $('section')[i];
+  $('.section').each((i) => {
+    let section = $('.section')[i];
     const sectionTop = section.offsetTop;
     if ($(this).scrollTop() >= sectionTop - 60) {
       current = section.getAttribute('id');

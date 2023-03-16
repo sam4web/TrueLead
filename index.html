@@ -49,7 +49,7 @@
         </nav>
         <!-- /nav -->
 
-        <a href="javascript:void(0)" class="contact btn nav-item__link">
+        <a href="javascript:void(0)" class="contact-btn btn nav-item__link">
           contact
         </a>
       </div>
@@ -65,7 +65,7 @@
       </div>
       <!-- /section-container -->
 
-      <div class="mouse-icon">
+      <div class="mouse-scroll">
         <div class="wheel"></div>
       </div>
 
@@ -216,24 +216,85 @@
         <!-- /filter-container -->
 
         <div class="project-container">
-          <script>
-            for (let i = 1; i < 6; i++) {
-              document.write(
-                `<div 
-                  class='project-item' 
-                  style='background-image: url("./static/img/project-0${i}.jpg")' 
-                 >
-                    <div class='project-content'>
-                        <h4 class='project-item__title'>WEB</h4>
-                        <p class='project-item__description'>
-                          Lorem, ipsum dolor sit amet consectetur adipisicing.
-                        </p>
-                    </div>
-                  </div>`
-              );
-            }
-          </script>
-          <!-- /project-item loop -->
+          <div
+            class="project-item"
+            style="background-image: url('./static/img/project-01.jpg')"
+          >
+            <div class="project-content">
+              <h4 class="project-item__title">WEB</h4>
+              <p class="project-item__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing.
+              </p>
+            </div>
+          </div>
+          <!-- /project-item -->
+
+          <div
+            class="project-item"
+            style="background-image: url('./static/img/project-02.jpg')"
+          >
+            <div class="project-content">
+              <h4 class="project-item__title">Android</h4>
+              <p class="project-item__description">
+                Distinctively embrace competitive action items and.
+              </p>
+            </div>
+          </div>
+          <!-- /project-item -->
+
+          <div
+            class="project-item"
+            style="background-image: url('./static/img/project-03.jpg')"
+          >
+            <div class="project-content">
+              <h4 class="project-item__title">Frontend developement</h4>
+              <p class="project-item__description">
+                Interactively cultivate turnkey channels with holistic.
+              </p>
+            </div>
+          </div>
+          <!-- /project-item -->
+
+          <div
+            class="project-item"
+            style="background-image: url('./static/img/project-04.jpg')"
+          >
+            <div class="project-content">
+              <h4 class="project-item__title">IOS Dev</h4>
+              <p class="project-item__description">
+                Authoritatively predominate prospective paradigms without
+                resource.
+              </p>
+            </div>
+          </div>
+          <!-- /project-item -->
+
+          <div
+            class="project-item"
+            style="background-image: url('./static/img/project-05.jpg')"
+          >
+            <div class="project-content">
+              <h4 class="project-item__title">QA Engineer</h4>
+              <p class="project-item__description">
+                Competently foster progressive quality vectors rather than.
+              </p>
+            </div>
+          </div>
+          <!-- /project-item -->
+
+          <div
+            class="project-item"
+            style="background-image: url('./static/img/project-06.jpg')"
+          >
+            <div class="project-content">
+              <h4 class="project-item__title">DevOps</h4>
+              <p class="project-item__description">
+                Continually mesh frictionless e-markets without
+                bricks-and-clicks applications.
+              </p>
+            </div>
+          </div>
+          <!-- /project-item -->
         </div>
         <!-- /project-container -->
       </div>
@@ -241,6 +302,7 @@
     </section>
     <!-- Portfolio section end -->
 
+    <!-- Blog section start -->
     <section class="blog-section" id="blog">
       <div class="section-container">
         <h3 class="section-title">latest articles</h3>
@@ -248,21 +310,63 @@
           Architecto provident deserunt eveniet libero
         </h5>
 
-        <div class="section-row">
+        <div class="blog-container">
           <div class="blog-item">
-            <img src="./static/img/blog-01" alt="article-img" />
+            <img
+              class="blog-item__image"
+              src="./static/img/blog-01.jpg"
+              alt="article-img"
+            />
             <div class="blog-item__content">
               <h4 class="blog-item__title">Efficiently engineer</h4>
               <p class="blog-item__description">
                 Competently envisioneer client-centric channels via
-                functionalized "outside the box"...
+                functionalized...
               </p>
-              <a href="#">Read article</a>
+              <a href="#" class="blog-item__redirect">Read article</a>
             </div>
           </div>
+          <!-- /blog-item -->
+
+          <div class="blog-item">
+            <img
+              class="blog-item__image"
+              src="./static/img/blog-02.jpg"
+              alt="article-img"
+            />
+            <div class="blog-item__content">
+              <h4 class="blog-item__title">Appropriately</h4>
+              <p class="blog-item__description">
+                Distinctively network innovative human capital vis-a-vis
+                visionary...
+              </p>
+              <a href="#" class="blog-item__redirect">Read article</a>
+            </div>
+          </div>
+          <!-- /blog-item -->
+
+          <div class="blog-item">
+            <img
+              class="blog-item__image"
+              src="./static/img/blog-03.jpg"
+              alt="article-img"
+            />
+            <div class="blog-item__content">
+              <h4 class="blog-item__title">Outside the box</h4>
+              <p class="blog-item__description">
+                Compellingly network diverse leadership skills for empowered
+                e-services...
+              </p>
+              <a href="#" class="blog-item__redirect">Read article</a>
+            </div>
+          </div>
+          <!-- /blog-item -->
         </div>
+        <!-- /blog-container -->
       </div>
+      <!-- /section-container -->
     </section>
+    <!-- Blog section end -->
 
     <!-- JS -->
     <script src="./static/js/jquery.min.js"></script>
