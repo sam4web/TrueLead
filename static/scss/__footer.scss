@@ -13,13 +13,17 @@
   .section-container {
     z-index: 50;
     position: relative;
-    @include grid(20px);
-    grid-template-columns: repeat(2, 1fr);
     padding: 60px 25px;
 
     @include responsive-medium {
-      padding: 45px 15px;
+      padding: 45px 20px;
     }
+  }
+
+  .section-row {
+    @include grid(20px);
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 25px;
 
     @include responsive-small {
       grid-template-columns: 1fr;
@@ -98,5 +102,24 @@
   textarea {
     height: 140px;
     resize: vertical;
+  }
+}
+
+.credit {
+  color: $light;
+  z-index: 50;
+  position: relative;
+  font-size: 13px;
+  line-height: 21px;
+  border-top: 1px solid $grey;
+  padding-top: 20px;
+
+  & > a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

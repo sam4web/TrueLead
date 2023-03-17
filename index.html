@@ -370,62 +370,76 @@
 
     <footer class="footer">
       <div class="section-container">
-        <div class="contact-info">
-          <div class="contact-info__item">
-            <h4 class="contact-info__title">phone</h4>
-            <p class="contact-info__value">+123-456-7890</p>
-          </div>
-          <!-- /contact-info__item -->
-          <div class="contact-info__item">
-            <h4 class="contact-info__title">address</h4>
-            <p class="contact-info__value">12345 Fake ST NoWhere AB Country</p>
-          </div>
-          <!-- /contact-info__item -->
-          <div class="contact-info__item">
-            <h4 class="contact-info__title">email</h4>
-            <p class="contact-info__value">info@truelead.com</p>
-          </div>
-          <!-- /contact-info__item -->
-        </div>
-        <!-- /contact-info -->
-
-        <div class="contact-form">
-          <h3 class="contact-form__title">drop us a line</h3>
-          <form action="">
-            <div class="contact-form__row">
-              <input
-                type="text"
-                name="name"
-                class="form__input-box"
-                placeholder="Name"
-              />
-              <!-- /form__input-box -->
-              <input
-                type="email"
-                name="email"
-                class="form__input-box"
-                placeholder="Email"
-              />
-              <!-- /form__input-box -->
-              <input
-                type="text"
-                name="subject"
-                class="form__input-box"
-                placeholder="Subject"
-              />
-              <!-- /form__input-box -->
+        <div class="section-row">
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <h4 class="contact-info__title">phone</h4>
+              <p class="contact-info__value">+123-456-7890</p>
             </div>
-            <!-- /contact-form__row -->
+            <!-- /contact-info__item -->
+            <div class="contact-info__item">
+              <h4 class="contact-info__title">address</h4>
+              <p class="contact-info__value">12345 Fake ST Nowhere Country</p>
+            </div>
+            <!-- /contact-info__item -->
+            <div class="contact-info__item">
+              <h4 class="contact-info__title">email</h4>
+              <p class="contact-info__value">info@truelead.com</p>
+            </div>
+            <!-- /contact-info__item -->
+          </div>
+          <!-- /contact-info -->
 
-            <textarea
-              name="message"
-              class="form__input-box"
-              placeholder="Message"
-            ></textarea>
-            <!-- /form__input-box -->
-          </form>
+          <div class="contact-form">
+            <h3 class="contact-form__title">drop us a line</h3>
+            <form action="">
+              <div class="contact-form__row">
+                <input
+                  type="text"
+                  name="name"
+                  class="form__input-box"
+                  placeholder="Name"
+                />
+                <!-- /form__input-box -->
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input-box"
+                  placeholder="Email"
+                />
+                <!-- /form__input-box -->
+                <input
+                  type="text"
+                  name="subject"
+                  class="form__input-box"
+                  placeholder="Subject"
+                />
+                <!-- /form__input-box -->
+              </div>
+              <!-- /contact-form__row -->
+
+              <textarea
+                name="message"
+                class="form__input-box"
+                placeholder="Message"
+              ></textarea>
+              <!-- /form__input-box -->
+            </form>
+          </div>
+          <!-- /contact-form -->
         </div>
-        <!-- /contact-form -->
+        <!-- /section-row -->
+
+        <div class="credit">
+          &copy;
+          <script>
+            let date = new Date();
+            document.writeln(date.getFullYear() + ',');
+          </script>
+          TrueLead Created By
+          <a href="https://github.com/sam4web/">Sam4Web</a>. All rights reserved
+        </div>
+        <!-- /credit -->
       </div>
       <!-- /section-container -->
     </footer>
