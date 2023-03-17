@@ -21,6 +21,11 @@ $(window).on('resize', function () {
   }
 });
 
+// scrolls to footer seciton when '.contact-btn is clicked
+$('.contact-btn').click(() => {
+  window.scrollTo(0, document.body.scrollHeight);
+});
+
 // On scroll event
 // > hides navbar
 // > changes styles of header
@@ -44,8 +49,8 @@ $(window).scroll(function () {
 function scrollSpy() {
   let current = '';
 
-  $('.section').each((i) => {
-    let section = $('.section')[i];
+  $('section').each((i) => {
+    let section = $('section')[i];
     const sectionTop = section.offsetTop;
     if ($(this).scrollTop() >= sectionTop - 60) {
       current = section.getAttribute('id');
