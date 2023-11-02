@@ -1,6 +1,6 @@
 ## TrueLead
 
-![project preview](./project-preview.png)
+A website template for web development agency.
 
 ### View:
 
@@ -20,3 +20,7 @@
 - responsive design
 - mobile friendly
 - animation on scroll
+
+### Page preview
+
+![project preview](./full-page-preview.png)
